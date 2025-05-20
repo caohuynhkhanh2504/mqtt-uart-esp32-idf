@@ -1,0 +1,167 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.1-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time May 20 2025 16:21:37[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=263f4h (156660) map[0m
+[0;32mI (159) esp_image: segment 1: paddr=0003641c vaddr=3ffb0000 size=03f38h ( 16184) load[0m
+[0;32mI (165) esp_image: segment 2: paddr=0003a35c vaddr=40080000 size=05cbch ( 23740) load[0m
+[0;32mI (174) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=9ea78h (649848) map[0m
+[0;32mI (397) esp_image: segment 4: paddr=000deaa0 vaddr=40085cbc size=1270ch ( 75532) load[0m
+[0;32mI (439) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (439) boot: Disabling RNG early entropy source...[0m
+[0;32mI (451) cpu_start: Multicore app[0m
+[0;32mI (460) cpu_start: Pro cpu start user code[0m
+[0;32mI (460) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (460) app_init: Application information:[0m
+[0;32mI (463) app_init: Project name:     Esp32_dldkmt[0m
+[0;32mI (468) app_init: App version:      v5.3.1-dirty[0m
+[0;32mI (473) app_init: Compile time:     May 20 2025 16:23:06[0m
+[0;32mI (479) app_init: ELF file SHA256:  a2d05166b...[0m
+[0;32mI (484) app_init: ESP-IDF:          v5.3.1-dirty[0m
+[0;32mI (490) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (495) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (500) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (505) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (512) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (518) heap_init: At 3FFB8B58 len 000274A8 (157 KiB): DRAM[0m
+[0;32mI (524) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (530) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (537) heap_init: At 400983C8 len 00007C38 (31 KiB): IRAM[0m
+[0;32mI (544) spi_flash: detected chip: generic[0m
+[0;32mI (547) spi_flash: flash io: dio[0m
+[0;32mI (552) main_task: Started on CPU0[0m
+[0;32mI (562) main_task: Calling app_main()[0m
+[0;32mI (562) MQTT_UART: [APP] Startup..[0m
+[0;32mI (562) MQTT_UART: [APP] Free memory: 276076 bytes[0m
+[0;32mI (562) MQTT_UART: [APP] IDF version: v5.3.1-dirty[0m
+[0;32mI (592) MQTT_UART: Starting Wi-Fi Station[0m
+I (602) wifi:wifi driver task: 3ffc0ac4, prio:23, stack:6656, core=0
+I (612) wifi:wifi firmware version: ccaebfa
+I (612) wifi:wifi certification version: v7.0
+I (612) wifi:config NVS flash: enabled
+I (612) wifi:config nano formating: disabled
+I (612) wifi:Init data frame dynamic rx buffer num: 32
+I (622) wifi:Init static rx mgmt buffer num: 5
+I (622) wifi:Init management short buffer num: 32
+I (632) wifi:Init dynamic tx buffer num: 32
+I (632) wifi:Init static rx buffer size: 1600
+I (642) wifi:Init static rx buffer num: 10
+I (642) wifi:Init dynamic rx buffer num: 32
+[0;32mI (642) wifi_init: rx ba win: 6[0m
+[0;32mI (652) wifi_init: accept mbox: 6[0m
+[0;32mI (652) wifi_init: tcpip mbox: 32[0m
+[0;32mI (652) wifi_init: udp mbox: 6[0m
+[0;32mI (662) wifi_init: tcp mbox: 6[0m
+[0;32mI (662) wifi_init: tcp tx win: 5760[0m
+[0;32mI (672) wifi_init: tcp rx win: 5760[0m
+[0;32mI (672) wifi_init: tcp mss: 1440[0m
+[0;32mI (672) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (682) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (692) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+I (762) wifi:mode : sta (5c:01:3b:6c:01:6c)
+I (762) wifi:enable tsf
+[0;32mI (772) MQTT_UART: WiFi STA mode initialized[0m
+[0;32mI (772) MQTT_UART: [STA_START] esp_wifi_connect() = ESP_OK[0m
+I (782) wifi:new:<8,0>, old:<1,0>, ap:<255,255>, sta:<8,0>, prof:1, snd_ch_cfg:0x0
+I (782) wifi:state: init -> auth (0xb0)
+I (792) wifi:state: auth -> assoc (0x0)
+I (792) wifi:state: assoc -> run (0x10)
+I (902) wifi:connected with Bin, aid = 3, channel 8, BW20, bssid = f8:64:b8:c3:76:48
+I (902) wifi:security: WPA2-PSK, phy: bgn, rssi: -64
+I (902) wifi:pm start, type: 1
+
+I (902) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (942) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+I (3012) wifi:<ba-add>idx:0 (ifx:0, f8:64:b8:c3:76:48), tid:0, ssn:1, winSize:64
+[0;32mI (4912) esp_netif_handlers: sta ip: 192.168.1.12, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (4912) MQTT_UART: Got IP: 192.168.1.12[0m
+[0;32mI (4912) MQTT_UART: Connected to Wi-Fi[0m
+[0;32mI (4922) MQTT_UART: MQTT_EVENT_ERROR[0m
+I (4932) wifi:<ba-add>idx:1 (ifx:0, f8:64:b8:c3:76:48), tid:6, ssn:3, winSize:64
+[0;32mI (5202) MQTT_UART: MQTT_EVENT_CONNECTED[0m
+[0;32mI (5212) MQTT_UART: Subscribed to topics[0m
+[0;32mI (5452) MQTT_UART: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (5582) MQTT_UART: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (5862) MQTT_UART: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (5872) MQTT_UART: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (5872) MQTT_UART: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (15722) MQTT_UART: Received data: ����
+[0;32mI (19692) MQTT_UART: Received data: �
+[0;32mI (21032) MQTT_UART: Received data: ;[0m
+[0;32mI (29032) MQTT_UART: Received data: [0m
+[0;32mI (29392) MQTT_UART: Received data: [0m
+[0;32mI (32902) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=/sensor/water_temperature
+DATA=aaaaaaaaaa
+[0;32mI (34642) MQTT_UART: Received data: �
+[0;32mI (34942) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=/sensor/water_temperature
+DATA=aaaaaaaaaa
+[0;32mI (35382) MQTT_UART: Received data: [0m
+[0;32mI (36692) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=/sensor/water_temperature
+DATA=aaaaaaaaaa
+[0;32mI (47922) MQTT_UART: Received data: [0m
+[0;32mI (54352) MQTT_UART: Received data: ��[0m
+[0;32mI (55092) MQTT_UART: Received data: �[0m
+[0;32mI (56172) MQTT_UART: Received data: [0m
+[0;32mI (57072) MQTT_UART: Received data: [0m
+[0;32mI (61802) MQTT_UART: Received data: [0m
+[0;32mI (62992) MQTT_UART: Received data: [0m
+[0;32mI (72452) MQTT_UART: Received data: [0m
+[0;32mI (75912) MQTT_UART: Received data: �
+[0;32mI (76912) MQTT_UART: Received data: [0m
+[0;32mI (78662) MQTT_UART: Received data: [0m
+[0;32mI (79232) MQTT_UART: Received data: ��[0m
+[0;32mI (79712) MQTT_UART: Received data: �
+[0;32mI (95382) MQTT_UART: Received data: �o�[0m
+[0;32mI (105942) MQTT_UART: Received data: �
+[0;32mI (116602) MQTT_UART: Received data: [0m
+[0;32mI (127072) MQTT_UART: Received data: [0m
+[0;32mI (137552) MQTT_UART: Received data: �
+[0;32mI (147562) MQTT_UART: Received data: [0m
+[0;32mI (157282) MQTT_UART: Received data: [0m
+[0;32mI (166762) MQTT_UART: Received data: �
+[0;32mI (171452) MQTT_UART: Received data: [0m
+[0;32mI (172032) MQTT_UART: Received data: [0m
+[0;32mI (175472) MQTT_UART: Received data: �[0m
+[0;32mI (176632) MQTT_UART: Received data: [0m
+[0;32mI (177542) MQTT_UART: Received data: ����
+[0;32mI (180732) MQTT_UART: Received data: [0m
+[0;32mI (181522) MQTT_UART: Received data: �U[0m
+[0;32mI (184202) MQTT_UART: Received data: [0m
+[0;32mI (185902) MQTT_UART: Received data: �*�[0m
+[0;32mI (192202) MQTT_UART: Received data: �
+[0;32mI (192452) MQTT_UART: Received data: [0m
+[0;32mI (213592) MQTT_UART: Received data: [0m
+[0;32mI (224392) MQTT_UART: Received data: �
+[0;32mI (224892) MQTT_UART: Received data: [0m
+[0;32mI (232392) MQTT_UART: Received data: [0m
+[0;32mI (238382) MQTT_UART: Received data: [0m
+[0;32mI (275092) MQTT_UART: Received data: ��[0m
+[0;32mI (276492) MQTT_UART: Received data: [0m
+[0;32mI (299372) MQTT_UART: Received data: [0m
+[0;32mI (302352) MQTT_UART: Received data: [0m
+[0;32mI (321022) MQTT_UART: Received data: [0m
