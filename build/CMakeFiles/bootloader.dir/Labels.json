@@ -2,34 +2,34 @@
 	"sources" : 
 	[
 		{
-			"file" : "D:/Espressif/frameworks/esp-idf-v5.3.1/examples/get-started/Esp32_dldkmt/build/CMakeFiles/bootloader"
+			"file" : "D:/Espressif/frameworks/esp-idf-v5.3.1/examples/get-started/mqtt-uart-esp32-idf/build/CMakeFiles/bootloader"
 		},
 		{
-			"file" : "D:/Espressif/frameworks/esp-idf-v5.3.1/examples/get-started/Esp32_dldkmt/build/CMakeFiles/bootloader.rule"
+			"file" : "D:/Espressif/frameworks/esp-idf-v5.3.1/examples/get-started/mqtt-uart-esp32-idf/build/CMakeFiles/bootloader.rule"
 		},
 		{
-			"file" : "D:/Espressif/frameworks/esp-idf-v5.3.1/examples/get-started/Esp32_dldkmt/build/CMakeFiles/bootloader-complete.rule"
+			"file" : "D:/Espressif/frameworks/esp-idf-v5.3.1/examples/get-started/mqtt-uart-esp32-idf/build/CMakeFiles/bootloader-complete.rule"
 		},
 		{
-			"file" : "D:/Espressif/frameworks/esp-idf-v5.3.1/examples/get-started/Esp32_dldkmt/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule"
+			"file" : "D:/Espressif/frameworks/esp-idf-v5.3.1/examples/get-started/mqtt-uart-esp32-idf/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule"
 		},
 		{
-			"file" : "D:/Espressif/frameworks/esp-idf-v5.3.1/examples/get-started/Esp32_dldkmt/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule"
+			"file" : "D:/Espressif/frameworks/esp-idf-v5.3.1/examples/get-started/mqtt-uart-esp32-idf/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule"
 		},
 		{
-			"file" : "D:/Espressif/frameworks/esp-idf-v5.3.1/examples/get-started/Esp32_dldkmt/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule"
+			"file" : "D:/Espressif/frameworks/esp-idf-v5.3.1/examples/get-started/mqtt-uart-esp32-idf/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule"
 		},
 		{
-			"file" : "D:/Espressif/frameworks/esp-idf-v5.3.1/examples/get-started/Esp32_dldkmt/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule"
+			"file" : "D:/Espressif/frameworks/esp-idf-v5.3.1/examples/get-started/mqtt-uart-esp32-idf/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule"
 		},
 		{
-			"file" : "D:/Espressif/frameworks/esp-idf-v5.3.1/examples/get-started/Esp32_dldkmt/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule"
+			"file" : "D:/Espressif/frameworks/esp-idf-v5.3.1/examples/get-started/mqtt-uart-esp32-idf/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule"
 		},
 		{
-			"file" : "D:/Espressif/frameworks/esp-idf-v5.3.1/examples/get-started/Esp32_dldkmt/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule"
+			"file" : "D:/Espressif/frameworks/esp-idf-v5.3.1/examples/get-started/mqtt-uart-esp32-idf/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule"
 		},
 		{
-			"file" : "D:/Espressif/frameworks/esp-idf-v5.3.1/examples/get-started/Esp32_dldkmt/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule"
+			"file" : "D:/Espressif/frameworks/esp-idf-v5.3.1/examples/get-started/mqtt-uart-esp32-idf/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule"
 		}
 	],
 	"target" : 

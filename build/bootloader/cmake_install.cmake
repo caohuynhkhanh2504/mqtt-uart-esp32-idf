@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("D:/Espressif/frameworks/esp-idf-v5.3.1/examples/get-started/Esp32_dldkmt/build/bootloader/esp-idf/cmake_install.cmake")
+  include("D:/Espressif/frameworks/esp-idf-v5.3.1/examples/get-started/mqtt-uart-esp32-idf/build/bootloader/esp-idf/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "D:/Espressif/frameworks/esp-idf-v5.3.1/examples/get-started/Esp32_dldkmt/build/bootloader/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "D:/Espressif/frameworks/esp-idf-v5.3.1/examples/get-started/mqtt-uart-esp32-idf/build/bootloader/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

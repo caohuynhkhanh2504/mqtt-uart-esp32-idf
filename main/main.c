@@ -35,7 +35,7 @@
 #define WIFI_FAIL_BIT BIT1
 
 #define MQTT_BROKER_URI "mqtt://3.27.197.226:1883"
-#define MQTT_TOPIC_SOIL_MOISTURE "/sensor/soil_moisture"
+#define MQTT_TOPIC_SOIL_MOISTURE "khaingu"
 
 #define UART_NUM UART_NUM_2 //  UART2
 #define TXD_PIN (GPIO_NUM_17) // Chân TX của UART1
@@ -50,7 +50,6 @@ esp_mqtt_client_handle_t client;
 uint8_t uart_rec_data[50];
 uint8_t uart_trans_data[50];
 int length;
-
 
 static void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_t event_id, void *event_data)
 {
@@ -87,18 +86,29 @@ static void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_
         printf("TOPIC=%.*s\r\n", event->topic_len, event->topic);
         printf("DATA=%.*s\r\n", event->data_len, event->data);
 
-        // So sánh topic nhận được với topic "/sensor/soil_moisture"
-        if (strncmp(event->topic, MQTT_TOPIC_SOIL_MOISTURE, event->topic_len) == 0 && strlen(MQTT_TOPIC_SOIL_MOISTURE) == event->topic_len) 
+        if (strncmp(event->topic, MQTT_TOPIC_SOIL_MOISTURE, event->topic_len) == 0 &&
+            strlen(MQTT_TOPIC_SOIL_MOISTURE) == event->topic_len) 
         {
-                // Sao chép dữ liệu nhận được vào uart_trans_data, đảm bảo null-terminated
-            size_t len = event->data_len;
-            if (len >= sizeof(uart_trans_data)) 
-                {
-                    len = sizeof(uart_trans_data) - 1;  // tránh tràn buffer
+            const char *sub_ptr = strstr((char *)event->data, "\"sub\":\"Soil Moisture Sensor\"");
+            const char *val_ptr = strstr((char *)event->data, "\"value\":");
+
+            if (sub_ptr && val_ptr) {
+                val_ptr += strlen("\"value\":");
+
+                // Bỏ khoảng trắng đầu (nếu có)
+                while (*val_ptr == ' ' || *val_ptr == '"') val_ptr++;
+
+                char *end = val_ptr;
+                while (*end && *end != ',' && *end != '}' && *end != '"') end++;
+
+                int len = end - val_ptr;
+                if (len > 0 && len < sizeof(uart_trans_data)) {
+                    strncpy((char *)uart_trans_data, val_ptr, len);
+                    uart_trans_data[len] = '\0';
+                    ESP_LOGI(TAG, "Received value = %s", uart_trans_data);
                 }
-            memcpy(uart_trans_data, event->data, len);
-            uart_trans_data[len] = '\0'; // kết thúc chuỗi
-        }
+            }
+        }  
         break;
 
     default:
@@ -235,9 +245,8 @@ void mqtt_publish_task(void *pvParameters) {
     while (1) {
         if (strstr((char *)uart_rec_data, "\"sensor\":\"Soil Moisture Sensor\"") != NULL) {
             esp_mqtt_client_publish(client, MQTT_TOPIC_SOIL_MOISTURE, (char *)uart_rec_data, strlen((char *)uart_rec_data), 1, 0);
-            memset(uart_rec_data, 0, sizeof(uart_rec_data));
         }
-        vTaskDelay(500/portTICK_PERIOD_MS);
+        vTaskDelay(500 / portTICK_PERIOD_MS);
     }
 }
 
@@ -283,7 +292,7 @@ void app_main(void)
     vTaskDelay(1000);
     xTaskCreate(uart_read_task, "uart_read_task", 4096, NULL, 10, NULL);
     xTaskCreate(mqtt_publish_task, "mqtt_publish_task", 4096, NULL, 5, NULL);
-    xTaskCreate(uart_send_task, "uart_send_task", 4096, NULL, 6, NULL);
+    xTaskCreate(uart_send_task, "uart_send_task", 4096, NULL, 7, NULL);
 
     while (1)
     {

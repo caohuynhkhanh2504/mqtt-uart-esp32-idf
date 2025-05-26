@@ -1,8 +1,8 @@
-# Install script for directory: D:/Espressif/frameworks/esp-idf-v5.3.1/examples/get-started/Esp32_dldkmt/components
+# Install script for directory: D:/Espressif/frameworks/esp-idf-v5.3.1/examples/get-started/mqtt-uart-esp32-idf/components
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/FirmWare")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/Esp32_dldkmt")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

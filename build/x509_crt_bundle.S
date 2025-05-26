@@ -1,4 +1,4 @@
-/* * Data converted from D:/Espressif/frameworks/esp-idf-v5.3.1/examples/get-started/Esp32_dldkmt/build/esp-idf/mbedtls/x509_crt_bundle
+/* * Data converted from D:/Espressif/frameworks/esp-idf-v5.3.1/examples/get-started/mqtt-uart-esp32-idf/build/esp-idf/mbedtls/x509_crt_bundle
  */
 .data
 #if !defined (__APPLE__) && !defined (__linux__)
